@@ -9,6 +9,13 @@ describe('todo actions', () => {
     })
   })
 
+  it('deleteTodo should create DELETE_TODO action', () => {
+    expect(actions.deleteTodo(1)).toEqual({
+      type: 'DELETE_TODO',
+      id: 1
+    })
+  })
+
   it('setVisibilityFilter should create SET_VISIBILITY_FILTER action', () => {
     expect(actions.setVisibilityFilter('active')).toEqual({
       type: 'SET_VISIBILITY_FILTER',
