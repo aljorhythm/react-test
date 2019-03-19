@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { ListGroup } from 'reactstrap';
 import Todo from './Todo';
 
-const TodoList = ({ todos, toggleTodo }) => (
+const TodoList = ({ todos, toggleTodo, deleteTodo }) => (
   <ListGroup style={{ marginTop: 10, marginBottom: 10 }}>
     {todos.map(todo =>
       <Todo
         key={todo.id}
         {...todo}
         onClick={() => toggleTodo(todo.id)}
+        onDeleteClick={() => deleteTodo(todo.id)}
       />
     )}
   </ListGroup>
