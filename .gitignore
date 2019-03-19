@@ -94,3 +94,6 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# VSCode Chrome Debugger
+.vscode/launch.json

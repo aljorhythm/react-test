@@ -5,12 +5,12 @@ import { addTodo } from '../actions'
 
 const AddTodo = ({ dispatch }) => {
   let input
-
   return (
     <Row style={{ marginTop: 20 }}>
       <Col>
         <Form onSubmit={e => {
           e.preventDefault()
+          console.log(input)
           if (!input.value.trim()) {
             return
           }
@@ -18,7 +18,7 @@ const AddTodo = ({ dispatch }) => {
           input.value = ''
         }}>
           <InputGroup>
-            <input ref={node => input = node} />
+            <Input onChange={(e) => {input = e.target}} />
             <InputGroupAddon addonType="append">
               <Button type="submit">
                 Add Todo
